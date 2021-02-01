@@ -45,38 +45,56 @@ public class Map : MonoBehaviour
 
     void Update()
     {
+
+        #region input test
         if (typeOfRoom == Type.Normal)
         {
-            if (Input.GetKeyDown(KeyCode.W))
-                z++;
-            if (Input.GetKeyDown(KeyCode.S))
-                z--;
-            if (Input.GetKeyDown(KeyCode.A))
-                x--;
-            if (Input.GetKeyDown(KeyCode.D))
-                x++;
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-                y++;
-            if (Input.GetKeyDown(KeyCode.LeftControl))
-                y--;
+            //if (Input.GetKeyDown(KeyCode.W))
+            //    z++;
+            //if (Input.GetKeyDown(KeyCode.S))
+            //    z--;
+            //if (Input.GetKeyDown(KeyCode.A))
+            //    x--;
+            //if (Input.GetKeyDown(KeyCode.D))
+            //    x++;
+            //if (Input.GetKeyDown(KeyCode.LeftShift))
+            //    y++;
+            //if (Input.GetKeyDown(KeyCode.LeftControl))
+            //    y--;
         }
         
         if (typeOfRoom == Type.Cloned)
         {
-            if (Input.GetKeyDown(KeyCode.W))
-                z++;
-            if (Input.GetKeyDown(KeyCode.S))
-                z--;
-            if (Input.GetKeyDown(KeyCode.A))
-                x--;
-            if (Input.GetKeyDown(KeyCode.D))
-                x++;
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-                y++;
-            if (Input.GetKeyDown(KeyCode.LeftControl))
-                y--;
+            //if (Input.GetKeyDown(KeyCode.W))
+            //    z++;
+            //if (Input.GetKeyDown(KeyCode.S))
+            //    z--;
+            //if (Input.GetKeyDown(KeyCode.A))
+            //    x--;
+            //if (Input.GetKeyDown(KeyCode.D))
+            //    x++;
+            //if (Input.GetKeyDown(KeyCode.LeftShift))
+            //    y++;
+            //if (Input.GetKeyDown(KeyCode.LeftControl))
+            //    y--;
         }
-
+        #endregion
+        
+        if (Input.GetKeyDown(KeyCode.W))
+            z++;
+        if (Input.GetKeyDown(KeyCode.S))
+            z--;
+        if (Input.GetKeyDown(KeyCode.A))
+            x--;
+        if (Input.GetKeyDown(KeyCode.D))
+            x++;
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            y++;
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+            y--;
+        
+        
+        
         x = Mathf.Clamp(x, 0, 9);
         y = Mathf.Clamp(y, 0, 9);
         z = Mathf.Clamp(z, 0, 9);
@@ -99,7 +117,7 @@ public class Map : MonoBehaviour
             Gizmos.color = Color.green;
         }
         
-        Gizmos.DrawSphere(_item, 1f);
+        Gizmos.DrawSphere(_item, .5f);
 
         for (int i = 0; i < 10; i++)
         for (int j = 0; j < 10; j++)
