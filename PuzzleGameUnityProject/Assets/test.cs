@@ -21,7 +21,7 @@ public class test : MonoBehaviour {
         for ( int j = 0 ; j < 10 ; j++ )
         for ( int k = 0 ; k < 10 ; k++ ) {
             Gizmos.color = new Color( 0.73f , 0.71f , 0.75f , 0.15f );
-            Gizmos.DrawWireSphere( transform.position + new Vector3(10,0,0) + ExtensionMethods.MapArray3D [ + i , j , k ] , .05f );
+            Gizmos.DrawWireSphere( transform.position + ExtensionMethods.ClonedRoomOffset + ExtensionMethods.MapArray3D [ + i , j , k ] , .05f );
         }
     }
 }
