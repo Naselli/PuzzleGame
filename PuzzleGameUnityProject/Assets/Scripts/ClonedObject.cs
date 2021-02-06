@@ -33,8 +33,8 @@ public class ClonedObject : MonoBehaviour
 
 
     public void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            gravityReversed = !gravityReversed;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space)) {
+        //    gravityReversed = !gravityReversed;
+        //}
     }
 }

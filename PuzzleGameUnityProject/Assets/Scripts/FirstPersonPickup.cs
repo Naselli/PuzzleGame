@@ -13,6 +13,11 @@ public class FirstPersonPickup : MonoBehaviour
 
    private void Update()
    {
+
+      if ( Input.GetKeyDown( KeyCode.Space ) ) {
+         GetComponent<Rigidbody>().AddForce(Vector3.up * 3.5f , ForceMode.Impulse);
+      }
+
       if (Input.GetKeyDown(KeyCode.E) && !isHolding )
       {
          isHolding = true;

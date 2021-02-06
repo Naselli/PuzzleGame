@@ -24,6 +24,9 @@ public class Block : MonoBehaviour
         y = Mathf.Clamp( y , 0 , 9 );
         z = Mathf.Clamp( z , 0 , 9 );
         clonedObject.transform.position = ExtensionMethods.ClonedRoomOffset + ExtensionMethods.MapArray3D [ y , ( max - 1 ) - x , z ];
+        clonedObject.transform.RotateAround(transform.position, transform.forward, -90f);
+        //clonedObject.transform.Rotate(new Vector3(0,0,-90));
+        //transform.RotateAround(transform.position, transform.up, Time.deltaTime * 90f);
         transform.position =  ExtensionMethods.MapArray3D [ x , y , z ];
     }
 
@@ -64,10 +67,16 @@ public class Block : MonoBehaviour
         clonedObject.transform.position =  ExtensionMethods.ClonedRoomOffset + ExtensionMethods.MapArray3D [  y , ( max - 1 ) - x , z ];
         transform.position = ExtensionMethods.MapArray3D [ x , y , z ];
 
-        if ( Input.GetKeyDown( KeyCode.Space ) )
+        if ( Input.GetKeyDown( KeyCode.P ) ) ///////////////////////////////////////////////////// HELP
             switched = !switched;
 
         previousPos = ExtensionMethods.MapArray3D [ x , y , z ];
+    }
+
+    private void UpdatePosition( ) {
+        do {
+            
+        } while ( x > 0  );
     }
 
     private void OnDrawGizmos( ) {
